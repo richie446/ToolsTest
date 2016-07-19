@@ -41,9 +41,9 @@
                 <version>3.6</version>
                 <executions>
                     <execution>
-                        <goals>
+                        <!--<goals>
                             <goal>check</goal>
-                        </goals>
+                        </goals>-->
                     </execution>
                 </executions>
             </plugin>
