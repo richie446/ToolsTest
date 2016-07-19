@@ -38,7 +38,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>3.6</version>
                 <executions>
                     <execution>
                         <goals>
@@ -61,8 +61,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>3.6</version>
                 <configuration>
+										<linkXref>true</linkXref>
+										<sourceEncoding>utf-8</sourceEncoding>
+										<minimumTokens>100</minimumTokens>
                     <targetJdk>1.6</targetJdk>
                     <!--<rulesets>-->
                     <!--<ruleset>pmd_rules.xml</ruleset>-->
