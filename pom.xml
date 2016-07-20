@@ -12,6 +12,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+				<findbugs.version>3.0.3</findbugs.version>
+				<pmd.version>3.6</pmd.version>
     </properties>
 
     <dependencies>
@@ -25,12 +27,27 @@
 
     <build>
         <plugins>
-
-
+						<!-- Findbugs Plugin -->
+						<plugin>
+								<groupId>org.codehaus.mojo</groupId>
+								<artifactId>findbugs-maven-plugin</artifactId>
+								<version>${findbugs.version}</version>
+						</plugin>
+						<!-- Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+						<!-- PMD Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.6</version>
+                <version>${pmd.version}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -44,11 +61,22 @@
 
     <reporting>
         <plugins>
-						
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>2.3</version>
+            </plugin>
+						<!-- Findbugs Plugin -->
+						<plugin>
+								<groupId>org.codehaus.mojo</groupId>
+								<artifactId>findbugs-maven-plugin</artifactId>
+								<version>${findbugs.version}</version>
+						</plugin>
+						<!-- PMD Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.6</version>
+                <version>${pmd.version}</version>
                 <configuration>
 										<linkXref>true</linkXref>
 										<sourceEncoding>utf-8</sourceEncoding>
