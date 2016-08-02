@@ -27,13 +27,13 @@
 
     <build>
         <plugins>
-						<!-- Findbugs Plugin -->
+						<!--Findbugs Plugin-->
 						<plugin>
 								<groupId>org.codehaus.mojo</groupId>
 								<artifactId>findbugs-maven-plugin</artifactId>
 								<version>${findbugs.version}</version>
 						</plugin>
-						<!-- Compiler Plugin -->
+						<!--Compiler Plugin-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -43,7 +43,7 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
-						<!-- PMD Plugin -->
+						<!--PMD Plugin-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
@@ -54,18 +54,19 @@
 
     <reporting>
         <plugins>
+						<!--Required for PMD-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
                 <version>2.3</version>
             </plugin>
-						<!-- Findbugs Plugin -->
+						<!--Findbugs Plugin-->
 						<plugin>
 								<groupId>org.codehaus.mojo</groupId>
 								<artifactId>findbugs-maven-plugin</artifactId>
 								<version>${findbugs.version}</version>
 						</plugin>
-						<!-- PMD Plugin -->
+						<!--PMD Plugin-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
